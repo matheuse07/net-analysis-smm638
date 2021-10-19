@@ -123,6 +123,7 @@ g = nx.from_scipy_sparse_matrix(A)
 # Pandas object
 df = pd.DataFrame(A)
 g = nx.from_pandas_adjacency(df)
+<<<<<<< Updated upstream
 
 # %% iterating over a graph's vertices and edge
 # generate a random graph
@@ -159,3 +160,17 @@ fig = plt.figure(figsize=(6, 4))
 ax = fig.add_subplot(1, 1, 1)
 ax.scatter(ds.keys(), ds.values(), color='k')
 plt.show()
+=======
+# %% two-mode network(bipartite)(bipartite graph)
+# attending a class, social network = soundcloud (offer and social)
+bg = nx.Graph()
+bottom_nodes = ["a", "b", "c", "d"]
+top_nodes = ["x", "y", "z"]
+bg.add_nodes_from(bottom_nodes, bipartite=0)
+bg.add_edges_from(top_nodes, bipartite=1)
+edgeslist =[("a", "x"), ("a","y"), ("b","y"), ("c","z"), ("d","x")]
+bg.add_edges_from(edgeslist)
+
+nx.algorithms.bipartite.is_bipartite(bg)
+# %%
+>>>>>>> Stashed changes
