@@ -101,3 +101,5 @@ for n in g.nodes():
     else:
         colors.append('white')
 nx.draw(g, pos=pos, with_labels=True, node_color=colors)
+
+# %%
